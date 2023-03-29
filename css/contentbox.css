@@ -1,0 +1,82 @@
+.context-box {
+    line-height: 250%;
+    z-index: 3;
+    margin-top: 100px;
+    width: 70%;
+    height: auto;
+    min-height: 85%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(to left,rgba(159, 130, 255, 0.2),rgba(69, 180, 249, 0.3));
+}
+
+.context-box > button {
+    width: fit-content;
+    height: fit-content;
+    min-width: 100px;
+    min-height: 20px;
+    line-height: 250%;
+    border-radius: 10px;
+    border-style: none;
+    background: rgba(255,255,255,0.7);
+}
+
+.context-box > span {
+    display: inline-flex;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: rgba(255, 197, 60);
+}
+
+.context-box > p {
+    font-size: 12px;
+}
+
+pre {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255,255,255,0.9);
+    box-sizing: border-box;
+    line-height: 100%;
+    white-space: pre;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: rgba(0,0,0,0.4);
+    overflow-x: scroll;
+    overflow-y: scroll;
+    counter-reset: line;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+pre > code {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+    color: rgba(255,255,255,0.9);
+    box-sizing: border-box;
+    line-height: 150%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    counter-increment: line;
+}
+
+pre > code:before {
+    content: counter(line);
+    font-family: "SimHei", "黑体", sans-serif;
+    display: inline-block;
+    width: 1em;
+    border-right: 1px solid rgba(255,255,255,0.9);
+    line-height: 200%;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+    color: rgba(153, 153, 153, 1);
+    text-align: right;
+}

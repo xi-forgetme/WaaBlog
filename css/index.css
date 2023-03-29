@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: url(../res/img/background.jpg) no-repeat;
+    background-attachment: fixed;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkmode {
+    position: fixed;
+    bottom: 20px;
+    background: rgba(0,0,0,0.5);
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    border-style: none;
+    border-radius: 50%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    width: 98%;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background: linear-gradient(to right,rgba(159, 130, 255, 0.5),rgba(69, 180, 249, 0.5));
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    z-index: 7;
+}
+
+header > div {
+    padding-left: 20px;
+}
+
+header > div > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+header > div > span {
+    font-size: 30px;
+    background: linear-gradient(to bottom left, rgb(96, 255, 255) 50%, rgb(255, 243, 117) 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>WaaBlog</title>
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/rightmenu.css">
+        <link rel="stylesheet" href="./css/contentbox.css">
+        <link rel="stylesheet" href="./css/floatWin.css">
+        <link rel="stylesheet" href="" id="dark_mode">
+    </head>
+    <body class="center" oncontextmenu="self.event.returnValue=false"; onload="setMode()">
+        <header>
+            <div><img src="./res/icon/logo.jpg" onclick="openUserMenu()"></div>
+            <div><span>WaaBlog</span></div>
+        </header>
+        
+        <button onclick="switchMode()" class="darkmode"></button>
+        <div class="context-box" id="contextbox">
+            <!-- Auto insert content -->
+        </div>
+        <!-- Default hidden -->
+        <div id="dragDiv" class="term">
+            <textarea name="" id=""></textarea>
+        </div>
+        <div id="aboutDiv" class="about">
+            <h3>WaaBlog build dev</h3>
+            <span>Developing...</span>
+        </div>
+        <!--右键菜单-->
+        <div id="rightmenu" class="rightmenu">
+	        <ul>
+	            <li onclick="reflush()"><span>Reflush</span></li>
+	        	<li onclick="test()"><span>测试</span></li>
+	        	<li onclick="term()"><span>显示/隐藏终端</span></li>
+	        </ul>
+	        <ul>
+	        	<li><span>Ctrl+S</span></li>
+                <li><span>Ctrl+P</span></li>
+	        	<li><span>Ctrl+R</span></li>
+	        </ul>
+	        <ul>
+	        	<li><span>Ctrl+U</span></li>
+	            <li onclick="about()"><span>About</span></li>
+	        </ul>
+        </div>
+    </body>
+    <script src="./js/base.js"></script>
+    <script src="./js/rightmenu.js"></script>
+    <script src="./js/markdown.js"></script>
+    <script src="./js/term.js"></script>
+</html>
