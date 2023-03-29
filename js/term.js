@@ -1,12 +1,5 @@
 let floatDiv = document.querySelector('#dragDiv');
 
-// function execCmd(cmd) {
-//     switch (cmd) {
-//         case 'help': exec(); break;
-//         default: console.log('他是个大傻逼')
-//     }
-// }
-
 floatDiv.addEventListener("mousedown", function(e) {
     if (window.event.ctrlKey) {
         let x = e.pageX - floatDiv.offsetLeft;
@@ -25,6 +18,7 @@ floatDiv.addEventListener("mousedown", function(e) {
 document.getElementById('termWin').addEventListener('keydown', function(e) {
     if (e.keyCode == 13) {
         var cmd = document.getElementById('termWin').value.split('\n')[document.getElementById('termWin').value.split('\n').length - 1]
+        console.log(cmd)
         document.getElementById('termWin').value += execCmd(cmd)
     }
 })

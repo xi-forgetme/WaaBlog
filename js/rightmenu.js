@@ -27,8 +27,15 @@ function term() {
 	}
 }
 
-function test() {
-	alert("Fuck, world!")
+function copy() {
+	var selection = window.getSelection().toString()
+	console.log(selection)
+    var textarea = document.createElement("textarea")
+    textarea.textContent = selection
+    document.body.appendChild(textarea)
+    textarea.select()
+	document.execCommand('copy')
+	document.body.removeChild(textarea)
 }
 
 function about() {

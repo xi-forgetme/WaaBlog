@@ -1,6 +1,5 @@
 function helpCmd() {
-    console.log('help')
-    return 'help '
+    return 'help'
 }
 
 function errCmd() {

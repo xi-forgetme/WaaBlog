@@ -11,6 +11,7 @@
         <header>
             <div><img src="./res/icon/logo.jpg" onclick="openUserMenu()"></div>
             <div><span>WaaBlog</span></div>
+            <div id="index-list" class="index">目录</div>
         </header>
         
         <button onclick="switchMode()" class="darkmode"></button>
@@ -28,8 +29,8 @@
         <!--右键菜单-->
         <div id="rightmenu" class="rightmenu">
 	        <ul>
-	            <li onclick="reflush()"><span>Reflush</span></li>
-	        	<li onclick="test()"><span>测试</span></li>
+	            <li onclick="reflush()"><span>刷新</span></li>
+	        	<li onclick="copy()"><span>复制（不能用）</span></li>
 	        	<li onclick="term()"><span>显示/隐藏终端</span></li>
 	        </ul>
 	        <ul>
@@ -39,7 +40,7 @@
 	        </ul>
 	        <ul>
 	        	<li><span>无</span></li>
-	            <li onclick="about()"><span>About</span></li>
+	            <li onclick="about()"><span>关于</span></li>
 	        </ul>
         </div>
     </body>

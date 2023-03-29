@@ -40,11 +40,12 @@ function parseMarkdown(markdownText) {
         line = '<br>' + line;
     }
   
-      // 处理标题
+    // 处理标题
     let match = line.match(/^(#{1,6})\s(.+)$/);
     if (match) {
         let tag = match[1].length;
         let text = match[2];
+        titles.push(text);
         line = `<h${tag}>${text}</h${tag}>`;
     }
     match = line.match(/^```(.*)$/);
@@ -97,7 +98,7 @@ function parseMarkdown(markdownText) {
   
     return output;
 }
-
+var titles = new Array();
 var mdUrl = window.location.search.split('?')[1]
 if (mdUrl == null) {
     addElement('h1','好喜欢小小的一只哇~');
@@ -113,9 +114,17 @@ try {
             const input = xhr.responseText;
             const html = parseMarkdown(input);
             document.getElementById("contextbox").innerHTML = html;
+            console.log(titles)
+            for (var i = 0; i < titles.length;i++) {
+              console.log(titles[i])
+              document.getElementById('index-list').innerHTML += '<br>' + titles[i];
+            }
+        } else {
+          document.getElementById('index-list').style.display = 'none';
         }
     }
 } catch(err) {
     console.log("Failed to load markdown");
     console.log(err);
+    document.getElementById('index-list').style.display = 'none';
 }
