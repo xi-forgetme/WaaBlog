@@ -29,7 +29,7 @@ function switchMode() {
 
 //Loading page
 document.onreadystatechange = function () {
-    // if (document.readyState == "complete") {  
-    //     document.getElementById('load-page').style.display = 'none';
-    // }
+    if (document.readyState == "complete") {  
+        document.getElementById('load-page').style.display = 'none';
+    }
 }
