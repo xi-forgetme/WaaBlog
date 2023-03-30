@@ -7,7 +7,10 @@
         <link rel="stylesheet" href="./css/floatWin.css">
         <link rel="stylesheet" href="" id="dark_mode">
     </head>
-    <body class="center" oncontextmenu="self.event.returnValue=false"; onload="setMode()">
+    <body class="center" oncontextmenu="self.event.returnValue=false"; onload="setMode()" id="page-body">
+        <div id="load-page" class="loading-div">
+            <h1>Loading~</h1>
+        </div>
         <header>
             <div><img src="./res/icon/logo.jpg" onclick="openUserMenu()"></div>
             <div><span>WaaBlog</span></div>

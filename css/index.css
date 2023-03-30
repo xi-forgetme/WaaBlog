@@ -46,7 +46,7 @@ header {
     background: linear-gradient(to right,rgba(159, 130, 255, 0.5),rgba(69, 180, 249, 0.5));
     backdrop-filter: blur(20px);
     border-radius: 20px;
-    z-index: 7;
+    z-index: 5;
 }
 
 header > div {
@@ -71,6 +71,7 @@ header > div > span {
 .index {
     display: block;
     position: fixed;
+    z-index: 6;
     top: 10px;
     right: 20px;
     line-height: 250%;
@@ -78,16 +79,32 @@ header > div > span {
     flex-direction: column;
     align-items: flex-start;
     min-width: 100px;
-    width: auto;
+    width: 100px;
     height: 2em;
     box-sizing: border-box;
     padding: 0px 10px 10px 10px;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.6);
     border-radius: 10px;
     overflow: hidden;
+    transition: (0.2s);
 }
 
 .index:hover {
+    width: max-content;
     height: max-content;
+    transition: (0.2s);
+}
+
+.loading-div {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    background: rgb(58, 255, 239);
 }
