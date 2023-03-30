@@ -80,3 +80,17 @@ pre > code:before {
     color: rgba(153, 153, 153, 1);
     text-align: right;
 }
+
+a {
+  text-decoration: none;
+  color: rgb(22, 220, 255);
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: none;
+}

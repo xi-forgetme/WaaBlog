@@ -75,6 +75,15 @@ function parseMarkdown(markdownText) {
         }
         line = match[1];
       }
+
+      //处理链接
+      match = line.match(/\[(.*?)\]\((.*?)\)/);
+      if (match) {
+        if (match[1] != undefined && match[2] != undefined) {
+          var link = `<a href="${match[2]}">${match[1]}</a>}`
+          line = line.replace(/\[[^\]]+\]\([^\)]+\)/, link);
+        }
+      }
   
       // 处理列表
       match = line.match(/^(\*|-) (.+)$/);
